@@ -17,4 +17,10 @@ class LibraryTest {
 		boolean result = myUserName.checkValidLastName("Pratap");
 		Assertions.assertEquals(true, result);
 	}
+	@Test
+	void givenEmail_ShoulHave_ThreeMandatoryPart_TwoOptionalPart() {
+		Library myUserName = new Library();
+		boolean result = myUserName.checkValidLastName("pratap.abc@gmail.com");
+		Assertions.assertEquals(true, result);
+	}
 }

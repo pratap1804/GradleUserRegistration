@@ -14,6 +14,11 @@ public class Library {
 		return myPattern.matcher(string).matches();
 	}
 	
+	public boolean checkValidEmail(String string) {
+		Pattern myPattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+	    return myPattern.matcher(string).matches();
+	 }
+	
     public static void main(String[] args) {
         System.out.println("Welcome here!");
     }
