@@ -24,6 +24,11 @@ public class Library {
 		return myPattern.matcher(string).matches();
 	}
 	
+	public boolean checkForValidPasswordFirstRule(String string) {
+		Pattern myPattern = Pattern.compile("^[a-z]{8,}");
+		return myPattern.matcher(string).matches();
+	}
+	
     public static void main(String[] args) {
         System.out.println("Welcome here!");
     }

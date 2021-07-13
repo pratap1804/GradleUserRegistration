@@ -30,4 +30,11 @@ class LibraryTest {
 		boolean result = myMobileNumber.checkValidMobileNumber("91 8989156503");
 		Assertions.assertEquals(true, result);
 	}
+	
+	@Test
+	void givenPassword_ShouldBeHaving_MinimumEightCharacters() {
+		Library myPasswordFirstRule = new Library();
+		boolean result = myPasswordFirstRule.checkValidMobileNumber("abcdefgh");
+		Assertions.assertEquals(true, result);
+	}
 }
