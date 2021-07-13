@@ -1,10 +1,13 @@
 package UserRegistration;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
- 
-    }
+	@Test
+	void givenUserName_ShouldBeginWithAUpperCase_AndHaveMinimumThreeCharacters() {
+		Library myUserName = new Library();
+		boolean result = myUserName.checkValidFirstName("AbAbcde");
+		Assertions.assertEquals(true, result);
+	}
 }
