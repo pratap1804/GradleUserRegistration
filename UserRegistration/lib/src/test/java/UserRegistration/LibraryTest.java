@@ -51,4 +51,11 @@ class LibraryTest {
 		boolean result = myPasswordThirdRule.checkForValidPasswordThirdRule("abcdefghiA123");
 		Assertions.assertEquals(true, result);
 	}
+	
+	@Test
+	void givenPassword_ShouldBeHaving_AtleatOneUpperCaseCharacter_WithOneNumeric_MustContainAsymbol() {
+		Library myPasswordFourthRule = new Library();
+		boolean result = myPasswordFourthRule.checkForValidPasswordFourthRule("abcdefghiA123@");
+		Assertions.assertEquals(true, result);
+	}
 }
