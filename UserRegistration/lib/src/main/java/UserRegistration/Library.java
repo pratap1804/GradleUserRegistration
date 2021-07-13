@@ -19,6 +19,11 @@ public class Library {
 	    return myPattern.matcher(string).matches();
 	 }
 	
+	public boolean checkValidMobileNumber(String string) {
+		Pattern myPattern = Pattern.compile("^(91){1}[ ][0-9]{10}");
+		return myPattern.matcher(string).matches();
+	}
+	
     public static void main(String[] args) {
         System.out.println("Welcome here!");
     }
